@@ -1,0 +1,14 @@
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\bin\Debug\OrdinarioProgra.exe.config
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\bin\Debug\OrdinarioProgra.exe
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\bin\Debug\OrdinarioProgra.pdb
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.Form1.resources
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.Properties.Resources.resources
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.csproj.CopyComplete
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.exe
+C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.pdb
