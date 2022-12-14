@@ -39,6 +39,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -72,15 +75,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(359, 187);
+            this.label1.Location = new System.Drawing.Point(359, 265);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Total";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(361, 307);
+            this.textBox1.Location = new System.Drawing.Point(361, 359);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(237, 26);
             this.textBox1.TabIndex = 4;
@@ -95,6 +99,7 @@
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Propina";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label2
             // 
@@ -117,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(498, 187);
+            this.label4.Location = new System.Drawing.Point(498, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(18, 20);
             this.label4.TabIndex = 8;
@@ -126,7 +131,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(359, 268);
+            this.label5.Location = new System.Drawing.Point(359, 320);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 9;
@@ -136,7 +141,7 @@
             // button4
             // 
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(363, 363);
+            this.button4.Location = new System.Drawing.Point(363, 415);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(141, 46);
             this.button4.TabIndex = 10;
@@ -144,11 +149,47 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(364, 172);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(85, 42);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "10%";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(480, 172);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(85, 42);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "15%";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(600, 172);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(85, 42);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "20%";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Cobrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 595);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -180,5 +221,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
