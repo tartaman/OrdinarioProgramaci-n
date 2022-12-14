@@ -18,6 +18,8 @@ namespace OrdinarioProgra
         double ingresado;
         double total;
         bool terminado;
+        public static bool debito;
+        public static bool credito;
         public Cobrar()
         {
             InitializeComponent();
@@ -102,6 +104,16 @@ namespace OrdinarioProgra
         {
             total = Caja.suma + Caja.suma * 0.20;
             label4.Text = total.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label5.Visible = false;
+            textBox1.Visible = false;
+            debito = true;
+            credito = false;
+            Tarjeta venta = new Tarjeta();
+            venta.Show();
         }
     }
 }
