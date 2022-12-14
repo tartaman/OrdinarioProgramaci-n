@@ -15,7 +15,9 @@ namespace OrdinarioProgra
 {
     public partial class Form1 : Form
     {
-        private string path = @"C:\Users\Usuario\OneDrive\Escritorio\Empleados\uwu.json";
+        //parece que hay que cambiar el path cada que lo use alguien
+        //private string path = @"C:\Users\Usuario\OneDrive\Escritorio\Empleados\uwu.json"; 
+        private string path = @"C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\uwu.json";
         private List<Empleadosxd> listaDeEmpleados = new List<Empleadosxd>();
         public Form1()
         {
@@ -63,14 +65,16 @@ namespace OrdinarioProgra
                 if (claveIngresada == listaDeEmpleados[i].Clave.ToString() && listaDeEmpleados[i].Gerente == false)
                 {
                     label2.Text = "SI estas enel sistema wachin pero cuidado no vaya a ser el del oxxo" + listaDeEmpleados.Count;
+                    Caja caja = new Caja();
+                    caja.Show();
                     break;
                 } 
-                if (claveIngresada == listaDeEmpleados[i].Clave.ToString() && listaDeEmpleados[i].Gerente == true)
+                else if (claveIngresada == listaDeEmpleados[i].Clave.ToString() && listaDeEmpleados[i].Gerente == true)
                 {
                     label2.Text = "Noma eres gerente";
                     break;
                 }
-                if (claveIngresada != listaDeEmpleados[i].Clave.ToString())
+                else 
                 {
                     label2.Text = "200 pa tu casaaaa";
                     break;
