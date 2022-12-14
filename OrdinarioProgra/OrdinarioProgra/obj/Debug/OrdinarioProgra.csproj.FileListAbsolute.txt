@@ -27,3 +27,4 @@ C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioPr
 C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.exe
 C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.pdb
 C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.Caja.resources
+C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.Cobrar.resources

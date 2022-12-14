@@ -17,6 +17,7 @@ namespace OrdinarioProgra
     {
         int[] precios = { 239, 234, 314, 329, 189, 339, 124, 114, 139, 49, 46, 54};
         string[] nombres = { "Lasaña horneada", "Spagetti con salsa pomodoro", "Trio italiano", "Arrachera", "Bacon cheese burguer", "Pizza de peperoni grande", "Ensalada césar", "Brownie", "Cheesecake", "Coca cola", "Tecate", "Piñada" };
+        public static int suma = 0;
         public Caja()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace OrdinarioProgra
         }
         private void total()
         {
-            int suma = 0;
+            
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 suma += Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value);
@@ -141,6 +142,12 @@ namespace OrdinarioProgra
         {
             dataGridView1.Rows.RemoveAt(n);
             n--;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Cobrar cobrar = new Cobrar();
+            cobrar.Show();
         }
     }
 }
