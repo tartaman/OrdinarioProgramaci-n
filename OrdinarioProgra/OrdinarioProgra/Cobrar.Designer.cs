@@ -72,6 +72,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Tarjeta de crédito";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -204,6 +205,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Cobrar";
             this.Text = "Cobrar";
+            this.Activated += new System.EventHandler(this.Cobrar_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +223,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;

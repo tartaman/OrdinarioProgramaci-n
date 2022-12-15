@@ -41,11 +41,11 @@ namespace OrdinarioProgra
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ingresado = Convert.ToDouble(textBox1.Text);
+            
             if (efectivo)
             {
-                
-                if(ingresado >= total)
+                ingresado = Convert.ToDouble(textBox1.Text);
+                if (ingresado >= total)
                 {
                     if(ingresado > total)
                     {
@@ -112,6 +112,25 @@ namespace OrdinarioProgra
             textBox1.Visible = false;
             debito = true;
             credito = false;
+            Tarjeta venta = new Tarjeta();
+            venta.Show();
+        }
+
+        private void Cobrar_Activated(object sender, EventArgs e)
+        {
+            if (Tarjeta.aprobado)
+            {
+                button4.Enabled = true;
+                
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label5.Visible = false;
+            textBox1.Visible = false;
+            debito = false;
+            credito = true;
             Tarjeta venta = new Tarjeta();
             venta.Show();
         }

@@ -1,1 +1,1 @@
-[ {"Tipo":"Credito", "Nip":"5678", "Dinero": 4000.00},{"Tipo":"Debito", "Nip":"9101", "Dinero": 500.00} ]
+[ {"Tipo":"Credito", "Nip":"5678", "Dinero": 4000.00},{"Tipo":"Debito", "Nip":"9101", "Dinero": 500.00}, {"Tipo":"Debito", "Nip":"1111", "Dinero": 500.00} ]

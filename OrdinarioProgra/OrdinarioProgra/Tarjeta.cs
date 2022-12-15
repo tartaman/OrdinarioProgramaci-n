@@ -18,11 +18,13 @@ namespace OrdinarioProgra
         string ingresado = "";
         private string path = @"C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\TARJETAS.json";
         private List<Tarjetas> listaDeTarjetas = new List<Tarjetas>();
-        bool aprobado = false;
+        public static bool aprobado = false;
+        string tipo;
 
         public Tarjeta()
         {
             InitializeComponent();
+            aprobado = false;
         }
         private void escribir()
         {
@@ -96,27 +98,31 @@ namespace OrdinarioProgra
             listaDeTarjetas= JsonConvert.DeserializeObject<List<Tarjetas>>(jsonString);
             if (Cobrar.debito)
             {
-               
-                    for(int i = 0; i < listaDeTarjetas.Count; i++)
-                    {
-                        if (listaDeTarjetas[i].Tipo == "Debito" && listaDeTarjetas[i].Nip == ingresado)
-                        {
-                            MessageBox.Show("FUNCIONO");
-                            aprobado = true;
-
-                        }
-                        else
-                        {
-                            ingresado = "";
-                            escribir();
-                    
-
-                        }
-                    }
-              
-                
-                
+                tipo = "Debito";
             }
+            else if (Cobrar.credito){
+                tipo = "Credito";
+            }
+            for(int i = 0; i < listaDeTarjetas.Count; i++)
+            {
+                if (listaDeTarjetas[i].Tipo == tipo && listaDeTarjetas[i].Nip == ingresado){
+                        MessageBox.Show("Tarjeta aprobada");
+                        aprobado = true;
+                        Cobrar.ActiveForm.Activate();
+                        this.Close();
+   
+                break;}
+                else{
+                aprobado=false;}
+            }
+            if (aprobado != true)
+                    {
+                        MessageBox.Show("No existe ninguna tarjeta con ese id");
+                        ingresado = "";
+                        escribir();
+                    }
+                
+            
         }
     }
     public class Tarjetas
