@@ -20,6 +20,8 @@ namespace OrdinarioProgra
         //private string path = @"C:\Users\Usuario\Documents\OrdinarioProgramaci-n\uwu.json"; 
         private string path = @"C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\uwu.json";
         public static List<Empleadosxd> listaDeEmpleados = new List<Empleadosxd>();
+        public static string empleado;
+        public static string clave;
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +44,8 @@ namespace OrdinarioProgra
             {
                 if (claveIngresada == listaDeEmpleados[i].Clave.ToString() && listaDeEmpleados[i].Gerente == false)
                 {
-                    
+                    empleado = listaDeEmpleados[i].Nombre.ToString();
+                    clave = listaDeEmpleados[i].Clave.ToString();
                     Caja caja = new Caja();
                     caja.Show();
                     entro = true;

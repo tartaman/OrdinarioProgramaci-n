@@ -51,11 +51,13 @@ namespace OrdinarioProgra
                     {
                         MessageBox.Show("Operación completada, su cambio es de : $" + (ingresado - total)+" vuelva pronto");
                         terminado = true;
+                        this.Close();
                     }
                     else
                     {
                         MessageBox.Show("Operación completada, vuelva pronto");
                         terminado = true;
+                        this.Close();
                     }
                 }
                 else
@@ -66,6 +68,7 @@ namespace OrdinarioProgra
             else if (tarjeta){
                 MessageBox.Show("Operación completada, le quedan $" + Tarjeta.restante);
                 terminado = true;
+                this.Close();
             }
             
 
