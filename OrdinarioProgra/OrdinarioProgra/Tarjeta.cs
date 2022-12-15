@@ -20,11 +20,16 @@ namespace OrdinarioProgra
         private List<Tarjetas> listaDeTarjetas = new List<Tarjetas>();
         public static bool aprobado = false;
         string tipo;
+        bool pobre;
+        public static double restante;
+        string jsonString;
 
         public Tarjeta()
         {
             InitializeComponent();
             aprobado = false;
+            pobre = false;
+            restante = 0;
         }
         private void escribir()
         {
@@ -106,16 +111,35 @@ namespace OrdinarioProgra
             for(int i = 0; i < listaDeTarjetas.Count; i++)
             {
                 if (listaDeTarjetas[i].Tipo == tipo && listaDeTarjetas[i].Nip == ingresado){
+                        
+                        
+                    if(listaDeTarjetas[i].Dinero >= Cobrar.total)
+                    {
+                        listaDeTarjetas[i].Dinero -= Cobrar.total;
+                        jsonString = JsonConvert.SerializeObject(listaDeTarjetas);
+                        File.WriteAllText(path, jsonString);
+                        restante = listaDeTarjetas[i].Dinero;
+                        Cobrar.ActiveForm.Activate();
                         MessageBox.Show("Tarjeta aprobada");
                         aprobado = true;
-                        Cobrar.ActiveForm.Activate();
                         this.Close();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay dinero suficiente en la tarjeta");
+                        pobre = true;
+                    }
+                    
+
+                        
    
-                break;}
+                break;
+                }
                 else{
                 aprobado=false;}
             }
-            if (aprobado != true)
+            if (aprobado != true && pobre !=true)
                     {
                         MessageBox.Show("No existe ninguna tarjeta con ese id");
                         ingresado = "";

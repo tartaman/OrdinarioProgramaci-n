@@ -16,7 +16,7 @@ namespace OrdinarioProgra
         bool efectivo = false;
         bool tarjeta = false;
         double ingresado;
-        double total;
+        public static double total;
         bool terminado;
         public static bool debito;
         public static bool credito;
@@ -60,6 +60,9 @@ namespace OrdinarioProgra
                 {
                     MessageBox.Show("Ingrese el monto correcto por favor");
                 }
+            }
+            else if (tarjeta){
+                MessageBox.Show("Operación completada, le quedan $" + Tarjeta.restante);
             }
         }
 
@@ -112,6 +115,7 @@ namespace OrdinarioProgra
             textBox1.Visible = false;
             debito = true;
             credito = false;
+            tarjeta = true;
             Tarjeta venta = new Tarjeta();
             venta.Show();
         }
@@ -129,6 +133,7 @@ namespace OrdinarioProgra
         {
             label5.Visible = false;
             textBox1.Visible = false;
+            tarjeta = true;
             debito = false;
             credito = true;
             Tarjeta venta = new Tarjeta();
