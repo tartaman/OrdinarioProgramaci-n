@@ -17,9 +17,9 @@ namespace OrdinarioProgra
     {
         bool entro;
         //parece que hay que cambiar el path cada que lo use alguien
-        private string path = @"C:\Users\Usuario\OneDrive\Escritorio\Empleados\uwu.json"; 
+        private string path = @"C:\Users\Usuario\Documents\OrdinarioProgramaci-n\uwu.json"; 
         //private string path = @"C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\uwu.json";
-        private List<Empleadosxd> listaDeEmpleados = new List<Empleadosxd>();
+        public static List<Empleadosxd> listaDeEmpleados = new List<Empleadosxd>();
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace OrdinarioProgra
             {
                 if (claveIngresada == listaDeEmpleados[i].Clave.ToString() && listaDeEmpleados[i].Gerente == false)
                 {
-                    label2.Text = "SI estas enel sistema wachin pero cuidado no vaya a ser el del oxxo" + listaDeEmpleados.Count;
+                    label2.Text = "SI estas en el sistema wachin pero cuidado no vaya a ser el del oxxo" + listaDeEmpleados.Count;
                     Caja caja = new Caja();
                     caja.Show();
                     entro = true;
