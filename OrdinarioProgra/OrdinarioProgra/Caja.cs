@@ -39,7 +39,7 @@ namespace OrdinarioProgra
         }
         private void total()
         {
-            
+            suma = 0;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 suma += Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value);
@@ -129,7 +129,7 @@ namespace OrdinarioProgra
                     dataGridView1.Rows[i].Cells[0].Value = i+1;
                 }
                 n--;
-
+                total();
             }
             catch
             {
@@ -142,6 +142,7 @@ namespace OrdinarioProgra
         {
             dataGridView1.Rows.RemoveAt(n);
             n--;
+            total();
         }
 
         private void button15_Click(object sender, EventArgs e)
