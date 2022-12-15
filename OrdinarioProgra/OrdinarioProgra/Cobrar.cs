@@ -32,7 +32,7 @@ namespace OrdinarioProgra
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label5.Visible = true;
+            
             textBox1.Visible = true;
             button4.Enabled = true;
             efectivo = true;
@@ -51,11 +51,13 @@ namespace OrdinarioProgra
                     {
                         MessageBox.Show("Operación completada, su cambio es de : $" + (ingresado - total)+" vuelva pronto");
                         terminado = true;
+                        this.Close();
                     }
                     else
                     {
                         MessageBox.Show("Operación completada, vuelva pronto");
                         terminado = true;
+                        this.Close();
                     }
                 }
                 else
@@ -66,6 +68,7 @@ namespace OrdinarioProgra
             else if (tarjeta){
                 MessageBox.Show("Operación completada, le quedan $" + Tarjeta.restante);
                 terminado = true;
+                this.Close();
             }
             
 
@@ -116,7 +119,7 @@ namespace OrdinarioProgra
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label5.Visible = false;
+            
             textBox1.Visible = false;
             debito = true;
             credito = false;
@@ -136,7 +139,7 @@ namespace OrdinarioProgra
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label5.Visible = false;
+            
             textBox1.Visible = false;
             tarjeta = true;
             debito = false;

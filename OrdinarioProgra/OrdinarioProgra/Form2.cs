@@ -15,7 +15,8 @@ namespace OrdinarioProgra
 {
     public partial class Form2 : Form
     {
-        string path = @"C:\Users\Usuario\Documents\OrdinarioProgramaci-n\uwu.json";
+        //string path = @"C:\Users\Usuario\Documents\OrdinarioProgramaci-n\uwu.json";
+        private string path = @"C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\uwu.json";
         public Form2()
         {
             InitializeComponent();
@@ -70,6 +71,12 @@ namespace OrdinarioProgra
             int NuevoPrecio = Convert.ToInt32(textBox6.Text);
 
             Caja.precios[ProductoId] = NuevoPrecio;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tablaventas tablaventas = new tablaventas();
+            tablaventas.Show();
         }
     }
 }

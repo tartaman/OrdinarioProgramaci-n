@@ -33,3 +33,5 @@ C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra
 C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.Cobrar.resources
 C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.Form2.resources
 C:\Users\Usuario\Documents\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.Tarjeta.resources
+C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.Form2.resources
+C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\OrdinarioProgra\OrdinarioProgra\obj\Debug\OrdinarioProgra.tablaventas.resources

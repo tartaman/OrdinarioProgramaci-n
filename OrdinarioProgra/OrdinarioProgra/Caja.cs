@@ -1,14 +1,17 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace OrdinarioProgra
 {
@@ -16,7 +19,9 @@ namespace OrdinarioProgra
     public partial class Caja : Form
     {
         public static int[] precios = { 239, 234, 314, 329, 189, 339, 124, 114, 139, 49, 46, 54};
-        string[] nombres = { "Lasaña horneada", "Spagetti con salsa pomodoro", "Trio italiano", "Arrachera", "Bacon cheese burguer", "Pizza de peperoni grande", "Ensalada césar", "Brownie", "Cheesecake", "Coca cola", "Tecate", "Piñada" };
+        string[] nombres = { "Lasaña horneada", "Spagetti con salsa pomodoro", "Trio italiano", "Arrachera", "Bacon cheese burguer", "Pizza de peperoni grande", "Ensalada césar", "Brownie", "Cheesecake", "Coca cola", "Sunrise", "Piñada" };
+        private List<Compras> listaDeCompras = new List<Compras>();
+        private string path = @"C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\COMPRAS.json";
         public static int suma = 0;
         public Caja()
         {
@@ -44,7 +49,7 @@ namespace OrdinarioProgra
             {
                 suma += Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value);
             }
-            label26.Text = "$" + suma.ToString();
+            label26.Text = suma.ToString();
         }
 
         
@@ -155,13 +160,23 @@ namespace OrdinarioProgra
         {
             if (Cobrar.terminado)
             {
+                Compras JsonEmpleados = new Compras()
+                {
+                    Nombreempleado1 = Form1.empleado,
+                    Clave1 = Form1.clave,
+                    Total1 = Cobrar.total
+
+                };
+                listaDeCompras.Add(JsonEmpleados);
+                string jsonString = JsonConvert.SerializeObject(listaDeCompras);
+                File.WriteAllText(path, jsonString);
                 for (int i = n; i > -1; i--)
                 {
                     dataGridView1.Rows.RemoveAt(i);
                     total();
                 }
-            
 
+                Cobrar.terminado = false;
             }
         }
 
@@ -169,5 +184,15 @@ namespace OrdinarioProgra
         {
 
         }
+    }
+    public class Compras
+    {
+        private string Nombreempleado;
+        private string Clave;
+        private double Total;
+
+        public string Nombreempleado1 { get => Nombreempleado; set => Nombreempleado = value; }
+        public string Clave1 { get => Clave; set => Clave = value; }
+        public double Total1 { get => Total; set => Total = value; }
     }
 }
