@@ -15,6 +15,7 @@ namespace OrdinarioProgra
 {
     public partial class Form1 : Form
     {
+        bool entro;
         //parece que hay que cambiar el path cada que lo use alguien
         //private string path = @"C:\Users\Usuario\OneDrive\Escritorio\Empleados\uwu.json"; 
         private string path = @"C:\Users\Dell\Documents\GitHub\OrdinarioProgramaci-n\uwu.json";
@@ -26,30 +27,7 @@ namespace OrdinarioProgra
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Esto lo voy a usar de ejemplo por ahora pero no se tiene que quedar asi si no quieren
-
-            Empleadosxd JsonEmpleado = new Empleadosxd
-            {
-                Id = 1,
-                Nombre = "Victor",
-                Edad = 18,
-                Clave = 123,
-                Gerente = false
-            };
-            Empleadosxd JsonEmpleado2 = new Empleadosxd
-            {
-                Id = 2,
-                Nombre = "UWU",
-                Edad = 21,
-                Clave = 12345,
-                Gerente = true
-            };
-            listaDeEmpleados.Add(JsonEmpleado);
-            listaDeEmpleados.Add(JsonEmpleado2);
-            string jsonString = JsonConvert.SerializeObject(listaDeEmpleados);
-            File.WriteAllText(path, jsonString);
-            
-
+         
             
         }
 
@@ -67,20 +45,22 @@ namespace OrdinarioProgra
                     label2.Text = "SI estas enel sistema wachin pero cuidado no vaya a ser el del oxxo" + listaDeEmpleados.Count;
                     Caja caja = new Caja();
                     caja.Show();
+                    entro = true;
                     break;
                 } 
                 else if (claveIngresada == listaDeEmpleados[i].Clave.ToString() && listaDeEmpleados[i].Gerente == true)
                 {
                     label2.Text = "Noma eres gerente";
-                    break;
-                }
-                else 
-                {
-                    label2.Text = "200 pa tu casaaaa";
+                    entro = true;
                     break;
                 }
 
             }
+            if (entro != true)
+            {
+                label2.Text = "200 pa tu casaaaa";
+            }
+            entro = false;
         }
     }
     public class Empleadosxd

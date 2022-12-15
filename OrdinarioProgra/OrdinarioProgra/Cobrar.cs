@@ -17,7 +17,7 @@ namespace OrdinarioProgra
         bool tarjeta = false;
         double ingresado;
         public static double total;
-        bool terminado;
+        public static bool terminado;
         public static bool debito;
         public static bool credito;
         public Cobrar()
@@ -50,10 +50,12 @@ namespace OrdinarioProgra
                     if(ingresado > total)
                     {
                         MessageBox.Show("Operación completada, su cambio es de : $" + (ingresado - total)+" vuelva pronto");
+                        terminado = true;
                     }
                     else
                     {
                         MessageBox.Show("Operación completada, vuelva pronto");
+                        terminado = true;
                     }
                 }
                 else
@@ -63,7 +65,10 @@ namespace OrdinarioProgra
             }
             else if (tarjeta){
                 MessageBox.Show("Operación completada, le quedan $" + Tarjeta.restante);
+                terminado = true;
             }
+            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
