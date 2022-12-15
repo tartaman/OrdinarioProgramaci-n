@@ -144,5 +144,10 @@ namespace OrdinarioProgra
             Tarjeta venta = new Tarjeta();
             venta.Show();
         }
+
+        private void Cobrar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

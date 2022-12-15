@@ -63,5 +63,13 @@ namespace OrdinarioProgra
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int ProductoId = Convert.ToInt32(textBox5.Text);
+            int NuevoPrecio = Convert.ToInt32(textBox6.Text);
+
+            Caja.precios[ProductoId] = NuevoPrecio;
+        }
     }
 }

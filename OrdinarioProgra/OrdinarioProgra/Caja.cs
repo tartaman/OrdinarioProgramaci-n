@@ -15,7 +15,7 @@ namespace OrdinarioProgra
     
     public partial class Caja : Form
     {
-        int[] precios = { 239, 234, 314, 329, 189, 339, 124, 114, 139, 49, 46, 54};
+        public static int[] precios = { 239, 234, 314, 329, 189, 339, 124, 114, 139, 49, 46, 54};
         string[] nombres = { "Lasaña horneada", "Spagetti con salsa pomodoro", "Trio italiano", "Arrachera", "Bacon cheese burguer", "Pizza de peperoni grande", "Ensalada césar", "Brownie", "Cheesecake", "Coca cola", "Tecate", "Piñada" };
         public static int suma = 0;
         public Caja()
@@ -163,6 +163,11 @@ namespace OrdinarioProgra
             
 
             }
+        }
+
+        private void Caja_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
