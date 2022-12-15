@@ -101,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Tarjeta.resx">
       <DependentUpon>Tarjeta.cs</DependentUpon>
@@ -118,6 +119,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menú CAJA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cobrar CAJA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Titulo caja.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cobrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gerente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

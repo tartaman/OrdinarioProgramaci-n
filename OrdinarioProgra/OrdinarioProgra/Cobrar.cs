@@ -32,7 +32,7 @@ namespace OrdinarioProgra
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label5.Visible = true;
+            
             textBox1.Visible = true;
             button4.Enabled = true;
             efectivo = true;
@@ -116,7 +116,7 @@ namespace OrdinarioProgra
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label5.Visible = false;
+            
             textBox1.Visible = false;
             debito = true;
             credito = false;
@@ -136,7 +136,7 @@ namespace OrdinarioProgra
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label5.Visible = false;
+            
             textBox1.Visible = false;
             tarjeta = true;
             debito = false;

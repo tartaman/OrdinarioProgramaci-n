@@ -16,7 +16,7 @@ namespace OrdinarioProgra
     public partial class Caja : Form
     {
         public static int[] precios = { 239, 234, 314, 329, 189, 339, 124, 114, 139, 49, 46, 54};
-        string[] nombres = { "Lasaña horneada", "Spagetti con salsa pomodoro", "Trio italiano", "Arrachera", "Bacon cheese burguer", "Pizza de peperoni grande", "Ensalada césar", "Brownie", "Cheesecake", "Coca cola", "Tecate", "Piñada" };
+        string[] nombres = { "Lasaña horneada", "Spagetti con salsa pomodoro", "Trio italiano", "Arrachera", "Bacon cheese burguer", "Pizza de peperoni grande", "Ensalada césar", "Brownie", "Cheesecake", "Coca cola", "Sunrise", "Piñada" };
         public static int suma = 0;
         public Caja()
         {
@@ -44,7 +44,7 @@ namespace OrdinarioProgra
             {
                 suma += Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value);
             }
-            label26.Text = "$" + suma.ToString();
+            label26.Text = suma.ToString();
         }
 
         
