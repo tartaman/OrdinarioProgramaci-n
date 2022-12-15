@@ -150,5 +150,19 @@ namespace OrdinarioProgra
             Cobrar cobrar = new Cobrar();
             cobrar.Show();
         }
+
+        private void Caja_Activated(object sender, EventArgs e)
+        {
+            if (Cobrar.terminado)
+            {
+                for (int i = n; i > -1; i--)
+                {
+                    dataGridView1.Rows.RemoveAt(i);
+                    total();
+                }
+            
+
+            }
+        }
     }
 }
