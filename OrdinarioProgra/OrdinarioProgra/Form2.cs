@@ -72,5 +72,11 @@ namespace OrdinarioProgra
 
             Caja.precios[ProductoId] = NuevoPrecio;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tablaventas tablaventas = new tablaventas();
+            tablaventas.Show();
+        }
     }
 }

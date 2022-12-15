@@ -39,6 +39,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,11 +150,22 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(722, 736);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(155, 43);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Mostrar ventas";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 801);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -187,5 +199,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button4;
     }
 }
